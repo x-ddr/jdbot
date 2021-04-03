@@ -21,6 +21,10 @@ jobs:
         run: |
             docker-compose up -d
             docker exec -i jd /bin/bash jup.sh
+            cd scripts
+            rm -rf .git
+            cd ..
+            mv scripts lxk
       - name: 'clone'
         run: |
           git clone https://github.com/monk-coder/dust.git

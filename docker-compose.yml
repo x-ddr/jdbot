@@ -9,7 +9,7 @@ services:
     hostname: jd
     volumes:
       - ./config:/jd/config
-      - ./log:/jd/log
+      # - ./log:/jd/log
       #- ./own:/jd/own
       - ./scripts:/jd/scripts
     environment: 
