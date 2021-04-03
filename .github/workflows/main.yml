@@ -19,7 +19,7 @@ jobs:
       - name: 'git pull'
         run: |
           git clone https://github.com/monk-coder/dust.git
-          ls
+          ls dust
       - name: 'Working'
         timeout-minutes: 350
         run: |
