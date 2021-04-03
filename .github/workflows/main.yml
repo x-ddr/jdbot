@@ -21,8 +21,10 @@ jobs:
           git clone https://github.com/monk-coder/dust.git
           ls dust
           cd dust 
-          rm -rf .git
+          rm -rf .git 
           ls
+          echo "=================="
+          cd ..
           ls dust
       - name: 'Working'
         timeout-minutes: 350
