@@ -26,13 +26,13 @@ jobs:
           echo "=================="
           cd ..
           ls dust
-      - name: 'Working'
-        timeout-minutes: 350
-        run: |
-          cd oldjd
-          mkdir $(date +%Y%m%d%H%M%S)
-          cd ..
-          cp -r dust oldjd/$(date +%Y%m%d%H%M%S)
+      # - name: 'Working'
+      #   timeout-minutes: 350
+      #   run: |
+      #     cd oldjd
+      #     mkdir $(date +%Y%m%d%H%M%S)
+      #     cd ..
+      #     cp -r dust oldjd/$(date +%Y%m%d%H%M%S)
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
