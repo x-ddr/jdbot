@@ -3,11 +3,11 @@ name: 'GitHub Actions pull'
 on:
   push:
     branches: 
-      - main
+      - master
   schedule:
    - cron: '* */6 * * *'
 jobs:
-  result-spider:
+  jdbot_pull:
     runs-on: ubuntu-latest
     steps:
       - name: set_time

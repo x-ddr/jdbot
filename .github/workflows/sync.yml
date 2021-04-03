@@ -14,7 +14,7 @@ jobs:
       uses: x-dr/sync-repo-to-gitee@master
       env:
           # 在 Settings->Secrets 配置 GITEE_KEY
-          SSH_KEY: ${{ secrets.GITEE }}
+          SSH_KEY: ${{ secrets.GITEE_KEY }}
       with:
           # 注意替换为你的 GitHub 源仓库地址
           github-repo: "git@github.com:x-dr/jdbot.git"
