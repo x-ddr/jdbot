@@ -24,6 +24,7 @@ jobs:
           rm -rf .git 
           rm README.md
           echo "=================="
+          cp -r dust/* ../
           cd ..
           ls dust
       # - name: 'Working'
