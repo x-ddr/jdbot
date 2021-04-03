@@ -17,12 +17,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: 'git pull'
-        run: git clone https://github.com/monk-coder/dust.git
+        run: |
+          git clone https://github.com/monk-coder/dust.git
+          ls
       - name: 'Working'
         timeout-minutes: 350
         run: |
           cd oldjd
-          rm -rf .git
           mkdir $(date +%Y%m%d%H%M%S)
           cd ..
           cp -r dust oldjd/$(date +%Y%m%d%H%M%S)
