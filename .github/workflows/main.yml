@@ -22,12 +22,12 @@ jobs:
         timeout-minutes: 350
         run: |
           cd oldjd
+          rm -rf .git
           mkdir $(date +%Y%m%d%H%M%S)
           cd ..
           cp -r dust oldjd/$(date +%Y%m%d%H%M%S)
       - name: Commit files
         run: |
-          rm -rf .git
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
