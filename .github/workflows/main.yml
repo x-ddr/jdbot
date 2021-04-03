@@ -20,7 +20,7 @@ jobs:
         timeout-minutes: 20
         run: |
             docker-compose up -d
-            docker exec -it jd /bin/bash jup.sh
+            docker exec -i jd /bin/bash jup.sh
       - name: 'clone'
         run: |
           git clone https://github.com/monk-coder/dust.git
