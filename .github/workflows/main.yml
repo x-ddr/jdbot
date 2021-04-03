@@ -17,6 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: lxk
+        timeout-minutes: 20
         run: |
             docker-compose up -d
             docker exec -it jd /bin/bash jup.sh
