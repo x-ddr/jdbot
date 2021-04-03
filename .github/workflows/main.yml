@@ -24,7 +24,7 @@ jobs:
             cd scripts
             sudo -i
             who
-            rm -rf .git
+            sudo rm -rf .git
             cd ..
             mv scripts lxk
       - name: 'clone'
