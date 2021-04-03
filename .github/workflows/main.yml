@@ -22,7 +22,7 @@ jobs:
             docker-compose up -d
             docker exec -i jd /bin/bash jup.sh
             cd scripts
-            rm -rf .git
+            mv .git gg
             cd ..
             mv scripts lxk
       - name: 'clone'
