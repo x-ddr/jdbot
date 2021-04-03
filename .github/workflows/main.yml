@@ -22,7 +22,7 @@ jobs:
           ls dust
           cd dust 
           rm -rf .git 
-          ls
+          rm README.md
           echo "=================="
           cd ..
           ls dust
