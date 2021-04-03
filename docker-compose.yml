@@ -4,7 +4,7 @@ services:
     image: nevinee/jd:v4
     container_name: jd
     restart: always
-    tty: true
+    # tty: true
     network_mode: bridge
     hostname: jd
     volumes:

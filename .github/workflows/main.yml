@@ -18,12 +18,8 @@ jobs:
         uses: actions/checkout@v2
       - name: lxk
         run: |
-          if [ -f docker-compose.yml ]; then
             docker-compose up -d
-            docker exec -it jd jup
-          else
-            docker build . --file Dockerfile
-          fi
+            docker exec -it jd /bin/bash jup.sh
       - name: 'clone'
         run: |
           git clone https://github.com/monk-coder/dust.git
