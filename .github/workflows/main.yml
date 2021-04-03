@@ -20,6 +20,10 @@ jobs:
         run: |
           git clone https://github.com/monk-coder/dust.git
           ls dust
+          cd dust 
+          rm -rf .git
+          ls
+          ls dust
       - name: 'Working'
         timeout-minutes: 350
         run: |
