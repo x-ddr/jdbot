@@ -28,6 +28,8 @@ jobs:
           \cp -r ./* ../
           cd ..
           ls dust
+          echo "# 更新时间⌚️ \
+          $(date +%Y%m%d%H%M%S)" > README.md
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
