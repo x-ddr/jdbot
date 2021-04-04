@@ -16,35 +16,18 @@ jobs:
           date
       - name: Checkout
         uses: actions/checkout@v2
-      # - name: lxk
-      #   timeout-minutes: 350
-      #   run: |
-      #       docker-compose up -d
-      #       docker exec -i jd /bin/bash jup.sh
-      #       cd scripts
-      #       sudo -i
-      #       who
-      #       sudo rm -rf .git
-      #       cd ..
-      #       mv scripts lxk
       - name: 'clone'
         run: |
+          rm -rf dust
           git clone https://github.com/monk-coder/dust.git
           ls dust
           cd dust 
           rm -rf .git 
           rm README.md
           echo "=================="
-          cp -r ./* ../
+          \cp -r ./* ../
           cd ..
           ls dust
-      # - name: 'Working'
-      #   timeout-minutes: 350
-      #   run: |
-      #     cd oldjd
-      #     mkdir $(date +%Y%m%d%H%M%S)
-      #     cd ..
-      #     cp -r dust oldjd/$(date +%Y%m%d%H%M%S)
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
