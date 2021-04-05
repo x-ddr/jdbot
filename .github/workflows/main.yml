@@ -28,7 +28,7 @@ jobs:
           \cp -r ./* ../
           cd ..
           ls dust
-          \mv dust ./old/dust$(date +%Y%m%d%H%M%S)
+          # \mv dust ./old/dust$(date +%Y%m%d%H%M%S)
           echo "# 更新时间⌚️ 
           > $(date +%Y%m%d%H%M%S)" > README.md
       - name: Commit files
