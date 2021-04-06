@@ -39,11 +39,21 @@ jobs:
           rm -rf .git 
           rm README.md
           echo "=================="
-          #\cp -r ./* ../NobyDa
-          \cp -r ./iQIYI-DailyBonus/iQIYI.js ../i-chenzhe
           cd ..
           \mv Script NobyDa
-          # \mv dust ./old/dust$(date +%Y%m%d%H%M%S)
+          echo "# 更新时间⌚️ 
+          > $(date +%Y%m%d%H%M%S)" > README.md
+      - name: "clone My-Actions"
+        run: |
+          rm -rf My-Actions
+          git clone https://github.com/BlueskyClouds/My-Actions.git
+          cd My-Actions 
+          rm -rf .git 
+          echo "=================="
+          #\cp -r ./* ../NobyDa
+          \cp -r ./function/iqiyi.js ../i-chenzhe
+          cd ..
+          \mv My-Actions NobyDa
           echo "# 更新时间⌚️ 
           > $(date +%Y%m%d%H%M%S)" > README.md
       - name: Commit files
