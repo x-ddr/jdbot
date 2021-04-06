@@ -42,8 +42,7 @@ jobs:
           #\cp -r ./* ../NobyDa
           \cp -r ./iQIYI-DailyBonus/iQIYI.js ../i-chenzhe
           cd ..
-          \mv NobyDa
-          ls Script NobyDa
+          \mv Script NobyDa
           # \mv dust ./old/dust$(date +%Y%m%d%H%M%S)
           echo "# 更新时间⌚️ 
           > $(date +%Y%m%d%H%M%S)" > README.md
