@@ -33,17 +33,17 @@ jobs:
           > $(date +%Y%m%d%H%M%S)" > README.md
       - name: "clone NobyDa"
         run: |
-          rm -rf Script
-          mkdir NobyDa
+          rm -rf NobyDa
           git clone -b master https://github.com/NobyDa/Script.git
           cd Script 
           rm -rf .git 
           rm README.md
           echo "=================="
-          \cp -r ./* ../NobyDa
+          #\cp -r ./* ../NobyDa
           \cp -r ./iQIYI-DailyBonus/iQIYI.js ../i-chenzhe
           cd ..
-          ls Script
+          \mv NobyDa
+          ls Script NobyDa
           # \mv dust ./old/dust$(date +%Y%m%d%H%M%S)
           echo "# 更新时间⌚️ 
           > $(date +%Y%m%d%H%M%S)" > README.md
