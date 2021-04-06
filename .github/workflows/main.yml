@@ -16,7 +16,7 @@ jobs:
           date
       - name: Checkout
         uses: actions/checkout@v2
-      - name: 'clone'
+      - name: 'clone dust'
         run: |
           rm -rf dust
           git clone https://github.com/monk-coder/dust.git
@@ -28,6 +28,21 @@ jobs:
           \cp -r ./* ../
           cd ..
           ls dust
+          # \mv dust ./old/dust$(date +%Y%m%d%H%M%S)
+          echo "# 更新时间⌚️ 
+          > $(date +%Y%m%d%H%M%S)" > README.md
+      - name: "clone NobyDa"
+        run: |
+          rm -rf Script
+          mkdir NobyDa
+          git clone -b master https://github.com/NobyDa/Script.git
+          cd Script 
+          rm -rf .git 
+          rm README.md
+          echo "=================="
+          \cp -r ./* ../NobyDa
+          cd ..
+          ls Script
           # \mv dust ./old/dust$(date +%Y%m%d%H%M%S)
           echo "# 更新时间⌚️ 
           > $(date +%Y%m%d%H%M%S)" > README.md
