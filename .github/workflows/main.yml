@@ -41,6 +41,7 @@ jobs:
           rm README.md
           echo "=================="
           \cp -r ./* ../NobyDa
+          \cp -r ./iQIYI-DailyBonus/iQIYI.js ../i-chenzhe
           cd ..
           ls Script
           # \mv dust ./old/dust$(date +%Y%m%d%H%M%S)
