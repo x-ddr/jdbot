@@ -44,7 +44,6 @@ jobs:
           rm -rf .git 
           echo "=================="
           #\cp -r ./* ../NobyDa
-          \cp -r ./function/iqiyi.js ../i-chenzhe
           cd ..
           echo "# 更新时间⌚️ 
           > $(date +%Y%m%d%H%M%S)" > README.md
