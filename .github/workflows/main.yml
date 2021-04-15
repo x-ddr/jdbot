@@ -19,8 +19,6 @@ jobs:
       - name: 'clone dust'
         run: |
           bash ./download.sh
-          rm -rf .git 
-          rm README.md
           echo "=================="
           echo "# 更新时间⌚️ 
           > $(date +%Y%m%d%H%M%S)" > README.md
@@ -51,7 +49,6 @@ jobs:
         run: |
           pwd
           ls
-          git init
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
